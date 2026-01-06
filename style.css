@@ -1,0 +1,23 @@
+:root{
+  --bg:#f7f8fb; --card:#fff; --accent:#276ef1; --danger:#d9534f;
+  --muted:#666;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); margin:0; padding:24px; color:#111;}
+.container{max-width:900px; margin:0 auto; background:var(--card); padding:24px; border-radius:10px; box-shadow:0 6px 18px rgba(12,12,12,0.06);}
+h1{margin:0 0 18px; font-size:1.5rem;}
+.row{display:flex; gap:12px; flex-wrap:wrap;}
+.field{flex:1 1 220px; margin-bottom:12px;}
+.field label{display:block; font-weight:600; margin-bottom:6px;}
+.field input, .field select, .field textarea{width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.95rem;}
+.inline label{margin-right:10px; font-weight:500;}
+.error{color:var(--danger); font-size:0.85rem; display:block; height:16px;}
+.top-errors{color:var(--danger); margin-top:6px;}
+.success-box{margin-top:10px; padding:12px; background:#e6ffed; border:1px solid #8ae39b; border-radius:6px; display:none;}
+button{background:var(--accent); color:white; padding:10px 14px; border-radius:8px; border:0; font-size:1rem;}
+button:disabled{opacity:0.55; cursor:not-allowed;}
+@media (max-width:600px){
+  .row{flex-direction:column;}
+}
+meter{width:100%; height:10px; margin-top:6px;}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration System - Frugal Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Registration Form</h1>
+    <form id="regForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="firstName">First Name *</label>
+          <input id="firstName" name="firstName" required />
+          <small class="error" id="errFirstName"></small>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name *</label>
+          <input id="lastName" name="lastName" required />
+          <small class="error" id="errLastName"></small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" id="errEmail"></small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" placeholder="+91xxxxxxxxxx" required />
+          <small class="error" id="errPhone"></small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="1" max="120" />
+        </div>
+
+        <div class="field">
+          <label>Gender *</label>
+          <div class="inline">
+            <label><input name="gender" type="radio" value="Male" required /> Male</label>
+            <label><input name="gender" type="radio" value="Female" /> Female</label>
+            <label><input name="gender" type="radio" value="Other" /> Other</label>
+          </div>
+          <small class="error" id="errGender"></small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="2"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country"></select>
+        </div>
+
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state"></select>
+        </div>
+
+        <div class="field">
+          <label for="city">City</label>
+          <select id="city"></select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" />
+          <meter id="pwdMeter" min="0" max="4" value="0"></meter>
+          <small id="pwdStrength"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" type="password" />
+          <small class="error" id="errConfirm"></small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label><input id="terms" type="checkbox" /> I accept the Terms & Conditions *</label>
+        <small class="error" id="errTerms"></small>
+      </div>
+
+      <div class="field">
+        <button id="submitBtn" type="submit" disabled>Submit</button>
+      </div>
+
+      <div id="topErrors" class="top-errors" aria-live="polite"></div>
+      <div id="successBox" class="success-box" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
